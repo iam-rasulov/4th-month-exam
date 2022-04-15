@@ -1,0 +1,360 @@
+*{
+    box-sizing: border-box;
+    font-family: "Asap Condensed";
+}
+
+
+*,
+html  
+{
+    scrollbar-width: inherit;
+    scrollbar-color: rgb(63, 63, 63) rgb(11, 11, 11);
+}
+
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track {
+    background: rgb(19, 19, 20);
+}
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+    background-color: rgb(146, 146, 146);
+    border-radius: 5px;
+    border: 3px solid rgb(3, 3, 3);
+}
+
+html {
+    background: #fff;
+    overflow: hidden;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.loader{
+    display: block;
+    z-index: 99;
+    position: absolute;
+    top: 320px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.header{
+    width: 100%;
+    padding: 30px 30px;
+    display: flex;
+    color: black;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.header__box{
+    align-items: center;
+}
+
+.btn-changer{
+    color: black;
+    border: none;
+    background-color: #fff;
+    font-size: 21px;
+}
+
+.lists{
+    display: flex;
+}
+
+.users-list {
+    width: 33.33%;
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    height: 90vh;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+.posts-list {
+    width: 33.33%;
+    height: 90vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 10px;
+    font: 100%/1.4 serif;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+}
+.commits-list {
+    width: 33.33%;
+    height: 90vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 10px;
+    font: 100%/1.4 serif;
+    border: 1px solid black;
+}
+
+.box__item{
+    list-style: none;  
+    padding-left: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.box__item__id{
+    width: 20%;
+    margin-left: auto;
+    font-size: 48px;
+    font-weight: 700;
+    display: block;
+    text-align: end;
+    padding-right: 15px;
+}
+
+.box__item__name{
+    width: 30%;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.box__item__username{
+    width: 30%;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.box__item__address{
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.box__item__gmail{
+    width: 50%;
+    position: relative;
+    display: block;
+    width: 50%;
+    font-style: italic;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 1s ease;
+    transition: padding 1s ease;
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    padding: 1px;
+    color: black;
+    border-radius: 3px;
+}
+.box__item__gmail::before{
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 2;
+    background-image: url(../image/email-black.png);
+    top: -2px;
+    left: -30px;
+}
+.box__item__gmail:hover{
+    color: rgb(109, 109, 109);
+}
+
+
+.box__item__locatsion{
+    width: 50%;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 2px;
+    padding-left: 25px;
+    color: black;
+}
+
+.box__item__locatsion::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    background-size: contain;
+    position: absolute;
+    background-image: url(../image/location-black.png);
+}
+.box__item__locatsion:hover{
+    color: rgb(109, 109, 109);
+}
+
+.box__item__tel{
+    width: 50%;
+    margin: 5px 0;
+    display: block;
+    border-radius: 1px;
+    padding-left: 25px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+.box__item__tel::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    background-size: contain;
+    position: absolute;
+    background-image: url(../image/telephone-black.png);
+}
+.box__item__tel:hover{
+    color: rgb(109, 109, 109);
+}
+
+.box__item__website{
+    width: 50%;
+    position: relative;
+    display: block;
+    margin: 10px 0;
+    padding-left: 25px;
+    color: black;
+    text-decoration: none;
+}
+.box__item__website::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    background-size: contain;
+    position: absolute;
+    background-image: url(../image/world-wide-web-black.png);
+}
+
+.box__item__website:hover{
+    color: rgb(109, 109, 109);
+}
+
+.box__item__company{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-post__item{
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    list-style: none;
+    text-align: center;
+}
+
+.box-post__item__title{
+    text-align: start;
+}
+
+.box-commit__item{
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    list-style: none;
+    text-align: center;
+}
+
+
+
+.bg-dark{
+    color: white;
+    background-color: rgb(95, 95, 95);
+    border: 1px solid white;
+}
+
+
+
+.bg-dark__tel{
+    color: #fff;
+    background-color: rgb(34, 34, 34);
+    border: 1px solid white;
+}
+.bg-dark__tel::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    background-size: contain;
+    position: absolute;
+    background-image: url(../image/telephone.png);
+}
+
+
+
+.bg-dark__gmail{
+    color: #fff;
+    background-color: rgb(34, 34, 34);
+    border: 1px solid white;
+}
+.bg-dark__gmail::before{
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 2;
+    background-image: url(../image/email.png);
+    top: -2px;
+    left: -30px;
+}
+
+
+
+.bg-dark__locatsion{
+    color: #fff;
+    background-color: rgb(34, 34, 34);
+    border: 1px solid white;
+}
+.bg-dark__locatsion::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    background-size: contain;
+    position: absolute;
+    background-image: url(../image/location.png);
+}
+
+
+.bg-dark__site{
+    color: #fff;
+    background-color: rgb(34, 34, 34);
+    border: 1px solid white;
+}
+.bg-dark__site::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    background-size: contain;
+    position: absolute;
+    background-image: url(../image/world-wide-web.png);
+}
