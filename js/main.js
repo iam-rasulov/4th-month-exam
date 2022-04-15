@@ -119,10 +119,10 @@ elList.addEventListener("click", evt => {
             const dataPost = await resPost.json()
     
             renderPosts(dataPost , elListPost)
+            renderUsers(data , elList )
     }
     getPost()
     }
-    renderUsers()
 })
 
 elListPost.addEventListener("click", evt => {
@@ -134,8 +134,9 @@ elListPost.addEventListener("click", evt => {
             const dataCommit = await resCommit.json()
     
             renderCommit(dataCommit , elListCommit )
+            renderUsers(data , elList )
     }
     getCommit()
     }
-    renderUsers()
 })
+
